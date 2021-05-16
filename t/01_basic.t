@@ -17,6 +17,7 @@ EOQ
 
 # query async
 subtest 'query assynchrolously' => sub {
+    plan skip_all => 'Requires $OVERPASS_DEVEL' unless $ENV{OVERPASS_DEVEL};
     my $p = $c->get_query_p( $q );
     isa_ok $p, 'Mojo::Promise';
     $p->then( sub { my $tx = shift;
@@ -31,6 +32,7 @@ subtest 'query assynchrolously' => sub {
 
 # query sync
 subtest 'query osm synchronously' => sub {
+    plan skip_all => 'Requires $OVERPASS_DEVEL' unless $ENV{OVERPASS_DEVEL};
     my $d = $c->get_query($q);
     ok $d, "got a response";
     ok $d->{elements}, "contain elements in response";
