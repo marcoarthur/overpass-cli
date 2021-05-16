@@ -1,10 +1,12 @@
 # NAME
 
-OverPass::Client - It's new $module
+OverPass::Client - Client to Overpass Turbo API (http://overpass-turbo.eu/)
 
 # SYNOPSIS
 
     use OverPass::Client;
+    my $c = OverPass::Client->new;
+    my $data = $c->get_query( "[out:json]; area[name="Caraguatatuba"];node["power"];" );
 
 # DESCRIPTION
 

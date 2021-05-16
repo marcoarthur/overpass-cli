@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Client to Overpass Turbo API (http://overpass-turbo.eu/)",
    "author" : [
       "Marco Arthur <arthurpbs@gmail.com>"
    ],
